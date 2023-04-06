@@ -185,8 +185,8 @@
      <Compile Include="Library\PackageCache\com.unity.timeline@1.6.4\Editor\CurveEditUtility.cs" />
      <Compile Include="Library\PackageCache\com.unity.timeline@1.6.4\Editor\Window\TimelineNavigator.cs" />
      <Compile Include="Library\PackageCache\com.unity.timeline@1.6.4\Editor\Actions\IMenuName.cs" />
-     <Compile Include="Library\PackageCache\com.unity.timeline@1.6.4\Editor\treeview\TimelineTreeViewGUI.cs" />
      <Compile Include="Library\PackageCache\com.unity.timeline@1.6.4\Editor\Extensions\AnimatedParameterExtensions.cs" />
+     <Compile Include="Library\PackageCache\com.unity.timeline@1.6.4\Editor\treeview\TimelineTreeViewGUI.cs" />
      <Compile Include="Library\PackageCache\com.unity.timeline@1.6.4\Editor\Utilities\StyleManager.cs" />
      <Compile Include="Library\PackageCache\com.unity.timeline@1.6.4\Editor\Window\TimelineWindow_TimeCursor.cs" />
      <Compile Include="Library\PackageCache\com.unity.timeline@1.6.4\Editor\Analytics\TimelineAnalytics.cs" />
