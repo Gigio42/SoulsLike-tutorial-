@@ -6,8 +6,9 @@ namespace Movement
 {
     public class AnimatorHandler : MonoBehaviour
     {
+        public PlayerManager playerManager;
         public Animator animator;
-        public InputHandler inputHandler;
+        InputHandler inputHandler;
         PlayerLocomotion playerLocomotion;
         int vertical;
         int horizontal;
@@ -15,6 +16,7 @@ namespace Movement
 
         public void Initialize()
         {
+            playerManager = GetComponentInParent<PlayerManager>();
             animator = GetComponent<Animator>();
             inputHandler = GetComponentInParent<InputHandler>();
             playerLocomotion = GetComponentInParent<PlayerLocomotion>();
@@ -103,7 +105,7 @@ namespace Movement
 
         private void OnAnimatorMove() 
         {
-            if (inputHandler.isInteracting == false) return;
+            if (playerManager.isInteracting == false) return;
 
             float delta = Time.deltaTime;
             playerLocomotion.rigidbody.drag = 0;
