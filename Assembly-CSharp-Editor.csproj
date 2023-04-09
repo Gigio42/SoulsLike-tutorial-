@@ -769,6 +769,10 @@
       <Project>{80687da6-2b86-21f9-a222-003b10556b5e}</Project>
       <Name>Unity.VisualScripting.SettingsProvider.Editor</Name>
     </ProjectReference>
+    <ProjectReference Include="Boxophobic.Utils.Editor.csproj">
+      <Project>{2a13110d-3b82-94a8-a901-b4d783d7d5b5}</Project>
+      <Name>Boxophobic.Utils.Editor</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection.csproj">
       <Project>{f416ad71-a4cb-cfee-8f97-fe38c6e38ece}</Project>
       <Name>Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection</Name>
@@ -805,6 +809,14 @@
       <Project>{2ed6ee43-bc8f-f254-5b80-06b82002c805}</Project>
       <Name>Unity.VisualScripting.Core</Name>
     </ProjectReference>
+    <ProjectReference Include="Boxophobic.SkyboxCubemapExtended.Editor.csproj">
+      <Project>{29e28d0b-e5c2-da40-da7e-a0c9df5f017e}</Project>
+      <Name>Boxophobic.SkyboxCubemapExtended.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Boxophobic.Utils.Scripts.csproj">
+      <Project>{3b3944c2-3d69-b38b-3a93-927150abbca5}</Project>
+      <Name>Boxophobic.Utils.Scripts</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.Services.Core.csproj">
       <Project>{71de2bcc-23e5-d848-e657-eff3140da526}</Project>
       <Name>Unity.Services.Core</Name>
@@ -840,18 +852,6 @@
     <ProjectReference Include="Unity.SysrootPackage.Editor.csproj">
       <Project>{19cd2af2-238b-be07-8f07-07f4ca3eb43f}</Project>
       <Name>Unity.SysrootPackage.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Boxophobic.Utils.Scripts.csproj">
-      <Project>{3b3944c2-3d69-b38b-3a93-927150abbca5}</Project>
-      <Name>Boxophobic.Utils.Scripts</Name>
-    </ProjectReference>
-    <ProjectReference Include="Boxophobic.SkyboxCubemapExtended.Editor.csproj">
-      <Project>{29e28d0b-e5c2-da40-da7e-a0c9df5f017e}</Project>
-      <Name>Boxophobic.SkyboxCubemapExtended.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Boxophobic.Utils.Editor.csproj">
-      <Project>{2a13110d-3b82-94a8-a901-b4d783d7d5b5}</Project>
-      <Name>Boxophobic.Utils.Editor</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
