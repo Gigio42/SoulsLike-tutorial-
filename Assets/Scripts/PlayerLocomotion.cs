@@ -25,7 +25,7 @@ namespace Dark
         public float inAirTimer;
 
         [Header("Movement Stats")]
-        [SerializeField] float movementSpeed = 5f;
+        [SerializeField] float walkingSpeed = 5f;
         [SerializeField] float sprintSpeed = 7;
         [SerializeField] float rotationSpeed = 10f;
         [SerializeField] float fallingSpeed = 45;
@@ -84,9 +84,9 @@ namespace Dark
             moveDirection.Normalize();
             moveDirection.y = 0;
 
-            float speed = movementSpeed;
+            float speed = walkingSpeed;
 
-            if (inputHandler.sprintFlag)
+            if (inputHandler.sprintFlag && inputHandler.moveAmount > 0.5f)
             {
                 speed = sprintSpeed;
                 playerManager.isSprinting = true;
@@ -94,7 +94,16 @@ namespace Dark
             }
             else
             {
-                moveDirection *= speed;
+                if (inputHandler.moveAmount < 0.5)
+                {
+                    moveDirection *= walkingSpeed;
+                    playerManager.isSprinting = false;
+                }
+                else
+                {
+                    moveDirection *= speed;
+                    playerManager.isSprinting = false;
+                }
             }
             moveDirection *= speed;
 
@@ -197,7 +206,7 @@ namespace Dark
 
                     Vector3 velocity = rigidbody.velocity;
                     velocity.Normalize();
-                    rigidbody.velocity = velocity * (movementSpeed / 2);
+                    rigidbody.velocity = velocity * (walkingSpeed / 2);
                     playerManager.isInAir = true;
                 }
             }

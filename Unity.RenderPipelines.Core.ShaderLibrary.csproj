@@ -9,10 +9,10 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{b710afb5-5847-4fef-3f13-500e06d4522c}</ProjectGuid>
+    <ProjectGuid>{8543524b-e5e3-a3e9-d044-a27503adfed5}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <AssemblyName>Assembly-CSharp</AssemblyName>
+    <AssemblyName>Unity.RenderPipelines.Core.ShaderLibrary</AssemblyName>
     <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <BaseDirectory>.</BaseDirectory>
@@ -36,208 +36,59 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\PlayerLocomotion.cs" />
-     <Compile Include="Assets\Asset Packs\Post-Processing-main\Assets\Color Blindness\ColorBlindness.cs" />
-     <Compile Include="Assets\Asset Packs\Post-Processing-main\Assets\Kuwahara Filter\Kuwahara.cs" />
-     <Compile Include="Assets\Asset Packs\Post-Processing-main\Assets\Color Correction\GammaCorrector.cs" />
-     <Compile Include="Assets\Asset Packs\Post-Processing-main\Assets\Blend Modes\BlendModes.cs" />
-     <Compile Include="Assets\WeaponHolderSlot.cs" />
-     <Compile Include="Assets\Item.cs" />
-     <Compile Include="Assets\Scripts\InputHandler.cs" />
-     <Compile Include="Assets\Asset Packs\Post-Processing-main\Assets\Color Correction\HueShifter.cs" />
-     <Compile Include="Assets\Asset Packs\Post-Processing-main\Assets\Tone Mapping\Tonemapper.cs" />
-     <Compile Include="Assets\Asset Packs\Post-Processing-main\Assets\Vignette\Vignette.cs" />
-     <Compile Include="Assets\Asset Packs\Post-Processing-main\Assets\Color Correction\ColorCorrection.cs" />
-     <Compile Include="Assets\Asset Packs\Post-Processing-main\Assets\Sharpness\SharpnessDispatcher.cs" />
-     <Compile Include="Assets\Asset Packs\Post-Processing-main\Assets\Zoom\Zoom.cs" />
-     <Compile Include="Assets\Asset Packs\Post-Processing-main\Assets\Fog\Fog.cs" />
-     <Compile Include="Assets\WeaponItem.cs" />
-     <Compile Include="Assets\Scripts\AnimatorHandler.cs" />
-     <Compile Include="Assets\Asset Packs\Post-Processing-main\Assets\Blur\Blur.cs" />
-     <Compile Include="Assets\Asset Packs\Post-Processing-main\Assets\Pixel Art\PixelArtFilter.cs" />
-     <Compile Include="Assets\Asset Packs\Post-Processing-main\Assets\Edge Detection\EdgeDetector.cs" />
-     <Compile Include="Assets\Scripts\PlayerManager.cs" />
-     <Compile Include="Assets\Scripts\CameraHandler.cs" />
-     <Compile Include="Assets\Asset Packs\Post-Processing-main\Assets\Kuwahara Filter\AnisotropicKuwahara.cs" />
-     <Compile Include="Assets\Scripts\PlayerControls.cs" />
-     <Compile Include="Assets\Asset Packs\Post-Processing-main\Assets\Pixel Art\Ditherer.cs" />
-     <Compile Include="Assets\WeaponSlotManager.cs" />
-     <Compile Include="Assets\Asset Packs\Post-Processing-main\Assets\ImageBlitter\ImageBlitter.cs" />
-     <Compile Include="Assets\Asset Packs\Post-Processing-main\Assets\Edge Detection\DifferenceOfGaussians.cs" />
-     <Compile Include="Assets\PlayerAttacker.cs" />
-     <Compile Include="Assets\Shaders\ResetAnimatorBool.cs" />
-     <Compile Include="Assets\Asset Packs\Post-Processing-main\Assets\Pixel Art\PaletteSwapper.cs" />
-     <Compile Include="Assets\Asset Packs\Post-Processing-main\Assets\Kuwahara Filter\GeneralizedKuwahara.cs" />
-     <Compile Include="Assets\Asset Packs\Post-Processing-main\Assets\Chromatic Aberration\ChromaticAberration.cs" />
-     <Compile Include="Assets\Asset Packs\Post-Processing-main\Assets\Bloom\Bloom.cs" />
-     <Compile Include="Assets\PlayerInventory.cs" />
-     <Compile Include="Assets\Asset Packs\Post-Processing-main\Assets\Edge Detection\ExtendedDoG.cs" />
-     <Compile Include="Assets\HealthBar.cs" />
-     <Compile Include="Assets\PlayerStats.cs" />
-     <Compile Include="Assets\DamagePlayer.cs" />
-     <None Include="Assets\Asset Packs\unity-chan!\Unity-chan! Model\Art\UnityChanShader\Shader\Unitychan_chara_fuku.shader" />
-     <None Include="Assets\Asset Packs\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\Toon_DoubleShadeWithFeather_Mobile_TransClipping_StencilMask.shader" />
-     <None Include="Assets\Asset Packs\Synty - Polygon Student Sample - Copia\README - Usage Rights for these assets.txt" />
-     <None Include="Assets\Asset Packs\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\Toon_ShadingGradeMap_Mobile_StencilMask.shader" />
-     <None Include="Assets\Asset Packs\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\Tess\Toon_DoubleShadeWithFeather_Tess_Light_StencilMask.shader" />
-     <None Include="Assets\Asset Packs\Post-Processing-main\Assets\Pixel Art\PixelArtFilter.shader" />
-     <None Include="Assets\Asset Packs\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\Tess\ToonColor_DoubleShadeWithFeather_TransClipping_Tess.shader" />
-     <None Include="Assets\Asset Packs\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\UCTS_DoubleShadeWithFeather.cginc" />
-     <None Include="Assets\Asset Packs\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\Tess\Toon_DoubleShadeWithFeather_Clipping_Tess.shader" />
-     <None Include="Assets\Asset Packs\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\Tess\ToonColor_ShadingGradeMap_Tess.shader" />
-     <None Include="Assets\Asset Packs\Post-Processing-main\Assets\Edge Detection\EdgeDetect.shader" />
-     <None Include="Assets\Asset Packs\Post-Processing-main\Assets\Zoom\Zoom.shader" />
-     <None Include="Assets\Asset Packs\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\Tess\ToonColor_ShadingGradeMap_AngelRing_TransClipping_Tess_StencilOut.shader" />
-     <None Include="Assets\Asset Packs\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\ToonColor_ShadingGradeMap_TransClipping_StencilOut.shader" />
-     <None Include="Assets\Asset Packs\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\ToonColor_DoubleShadeWithFeather_StencilMask.shader" />
-     <None Include="Assets\Asset Packs\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\Toon_DoubleShadeWithFeather_Mobile_Clipping_StencilMask.shader" />
-     <None Include="Assets\Asset Packs\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\Toon_ShadingGradeMap_AngelRing_StencilOut.shader" />
-     <None Include="Assets\Asset Packs\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\Tess\Toon_ShadingGradeMap_AngelRing_Tess_Light.shader" />
-     <None Include="Assets\Asset Packs\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\Tess\ToonColor_DoubleShadeWithFeather_Tess_StencilOut.shader" />
-     <None Include="Assets\Asset Packs\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\Tess\UCTS_Outline_Tess.cginc" />
-     <None Include="Assets\Asset Packs\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\Toon_ShadingGradeMap_AngelRing_TransClipping_StencilOut.shader" />
-     <None Include="Assets\Asset Packs\unity-chan!\Unity-chan! Model\Art\UnityChanShader\Shader\Unitychan_chara_akarami_blend.shader" />
-     <None Include="Assets\Asset Packs\Post-Processing-main\Assets\Chromatic Aberration\ChromaticAberration.shader" />
-     <None Include="Assets\Shaders\New shader.shader" />
-     <None Include="Assets\Asset Packs\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\Toon_OutlineObject.shader" />
-     <None Include="Assets\Asset Packs\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\Toon_DoubleShadeWithFeather_Clipping_OnlyColor.shader" />
-     <None Include="Assets\Asset Packs\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\Tess\UCTS_ShadowCaster_Tess.cginc" />
-     <None Include="Assets\Asset Packs\Post-Processing-main\Assets\Color Blindness\Protanomaly.cginc" />
-     <None Include="Assets\Asset Packs\BOXOPHOBIC\Skybox Cubemap Extended\Core\Shaders\Skybox Cubemap Extended.shader" />
-     <None Include="Assets\Asset Packs\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\Toon_ShadingGradeMap_StencilOut.shader" />
-     <None Include="Assets\Asset Packs\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\Toon_ShadingGradeMap_AngelRing_TransClipping.shader" />
-     <None Include="Assets\Asset Packs\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\Tess\ToonColor_DoubleShadeWithFeather_Transparent_Tess_StencilOut.shader" />
-     <None Include="Assets\Asset Packs\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\Toon_DoubleShadeWithFeather_StencilMask.shader" />
-     <None Include="Assets\Asset Packs\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\Tess\UCTS_Tess.cginc" />
-     <None Include="Assets\Asset Packs\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\Toon_ShadingGradeMap_AngelRing_Mobile.shader" />
-     <None Include="Assets\Asset Packs\unity-chan!\Unity-chan! Model\Art\UnityChanShader\Shader\Unitychan_chara_hair_ds.shader" />
-     <None Include="Assets\Asset Packs\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\ToonColor_DoubleShadeWithFeather_TransClipping_StencilOut.shader" />
-     <None Include="Assets\Asset Packs\Post-Processing-main\Assets\Pixel Art\PaletteSwapper.shader" />
-     <None Include="Assets\Asset Packs\Post-Processing-main\Assets\Kuwahara Filter\GeneralizedKuwahara.shader" />
-     <None Include="Assets\Asset Packs\Post-Processing-main\Assets\Fog\Fog.shader" />
-     <None Include="Assets\Asset Packs\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\Tess\Toon_DoubleShadeWithFeather_Tess_Light.shader" />
-     <None Include="Assets\Asset Packs\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\ToonColor_ShadingGradeMap_StencilOut.shader" />
-     <None Include="Assets\Asset Packs\unity-chan!\Unity-chan! Model\Art\UnityChanShader\Shader\Unitychan_chara_hada.shader" />
-     <None Include="Assets\Asset Packs\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\Tess\ToonColor_ShadingGradeMap_AngelRing_Tess_TransClipping.shader" />
-     <None Include="Assets\Asset Packs\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\ToonColor_ShadingGradeMap_AngelRing_StencilOut.shader" />
-     <None Include="Assets\Asset Packs\Post-Processing-main\Assets\Sharpness\ContrastAdaptiveSharpness.shader" />
-     <None Include="Assets\Asset Packs\Post-Processing-main\Assets\Kuwahara Filter\Kuwahara.shader" />
-     <None Include="Assets\Asset Packs\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\Tess\ToonColor_DoubleShadeWithFeather_Clipping_Tess_StencilOut.shader" />
-     <None Include="Assets\Asset Packs\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\Tess\ToonColor_ShadingGradeMap_Tess_StencilMask.shader" />
-     <None Include="Assets\Asset Packs\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\Toon_DoubleShadeWithFeather_Clipping.shader" />
-     <None Include="Assets\Asset Packs\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\Tess\Toon_ShadingGradeMap_AngelRing_TransClipping_Tess.shader" />
-     <None Include="Assets\Asset Packs\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\ToonColor_ShadingGradeMap_StencilMask.shader" />
-     <None Include="Assets\Asset Packs\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\Tess\Toon_DoubleShadeWithFeather_Clipping_Tess_StencilOut.shader" />
-     <None Include="Assets\Asset Packs\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\Toon_DoubleShadeWithFeather_Mobile_TransClipping.shader" />
-     <None Include="Assets\Asset Packs\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\Tess\Toon_ShadingGradeMap_AngelRing_TransClipping_Tess_StencilOut.shader" />
-     <None Include="Assets\Asset Packs\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\Tess\Toon_ShadingGradeMap_Tess_Light.shader" />
-     <None Include="Assets\Asset Packs\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\Toon_DoubleShadeWithFeather_Mobile_StencilOut.shader" />
-     <None Include="Assets\Asset Packs\Post-Processing-main\Assets\Edge Detection\DifferenceOfGaussians.shader" />
-     <None Include="Assets\Asset Packs\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\ToonColor_ShadingGradeMap_AngelRing_TransClipping_StencilOut.shader" />
-     <None Include="Assets\Asset Packs\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\Tess\Toon_OutlineObject_Tess_StencilOut.shader" />
-     <None Include="Assets\Asset Packs\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\ToonColor_DoubleShadeWithFeather_TransClipping.shader" />
-     <None Include="Assets\Asset Packs\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\ToonColor_DoubleShadeWithFeather_TransClipping_StencilMask.shader" />
-     <None Include="Assets\Asset Packs\unity-chan!\Unity-chan! Model\Art\UnityChanShader\Shader\Unitychan_chara_fuku_ds.shader" />
-     <None Include="Assets\Asset Packs\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\ToonColor_DoubleShadeWithFeather.shader" />
-     <None Include="Assets\Asset Packs\unity-chan!\Unity-chan! Model\Art\UnityChanShader\Shader\Unitychan_chara_eyelash_blend.shader" />
-     <None Include="Assets\Asset Packs\Post-Processing-main\Assets\Sharpness\Sharpness.shader" />
-     <None Include="Assets\Asset Packs\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\Tess\Toon_ShadingGradeMap_Tess_StencilOut.shader" />
-     <None Include="Assets\Asset Packs\Post-Processing-main\Assets\Color Blindness\Tritanomaly.cginc" />
-     <None Include="Assets\Asset Packs\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\Toon_ShadingGradeMap_TransClipping_StencilOut.shader" />
-     <None Include="Assets\Asset Packs\Post-Processing-main\Assets\Color Correction\HueShift.shader" />
-     <None Include="Assets\Asset Packs\BOXOPHOBIC\Skybox Cubemap Extended\Core\Shaders\Skybox Cubemap Blend.shader" />
-     <None Include="Assets\Asset Packs\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\ToonColor_ShadingGradeMap_Transparent.shader" />
-     <None Include="Assets\Asset Packs\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\ToonColor_DoubleShadeWithFeather_Transparent.shader" />
-     <None Include="Assets\Asset Packs\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\Tess\ToonColor_DoubleShadeWithFeather_Tess_StencilMask.shader" />
-     <None Include="Assets\Asset Packs\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\Tess\ToonColor_DoubleShadeWithFeather_TransClipping_Tess_StencilOut.shader" />
-     <None Include="Assets\Asset Packs\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\ToonColor_DoubleShadeWithFeather_Clipping_OnlyColor.shader" />
-     <None Include="Assets\Asset Packs\Post-Processing-main\Assets\Vignette\Vignette.shader" />
-     <None Include="Assets\Asset Packs\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\ToonColor_DoubleShadeWithFeather_Clipping_StencilOut.shader" />
-     <None Include="Assets\Asset Packs\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\Tess\Toon_DoubleShadeWithFeather_Tess_StencilMask.shader" />
-     <None Include="Assets\Asset Packs\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\Tess\Toon_ShadingGradeMap_TransClipping_Tess_StencilOut.shader" />
-     <None Include="Assets\Asset Packs\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\Tess\Toon_OutlineObject_Tess.shader" />
-     <None Include="Assets\Asset Packs\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\Tess\Toon_ShadingGradeMap_AngelRing_Tess_StencilOut.shader" />
-     <None Include="Assets\Asset Packs\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\Tess\Toon_ShadingGradeMap_Tess.shader" />
-     <None Include="Assets\Asset Packs\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\Tess\ToonColor_ShadingGradeMap_AngelRing_Tess.shader" />
-     <None Include="Assets\Asset Packs\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\Tess\ToonColor_DoubleShadeWithFeather_Clipping_Tess_StencilMask.shader" />
-     <None Include="Assets\Asset Packs\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\Toon_DoubleShadeWithFeather_Mobile_Clipping.shader" />
-     <None Include="Assets\Asset Packs\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\Tess\Toon_DoubleShadeWithFeather_TransClipping_Tess_StencilMask.shader" />
-     <None Include="Assets\Asset Packs\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\Tess\Toon_ShadingGradeMap_Tess_Light_StencilOut.shader" />
-     <None Include="Assets\Asset Packs\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\Toon_ShadingGradeMap_Mobile_TransClipping_StencilMask.shader" />
-     <None Include="Assets\Asset Packs\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\Toon_DoubleShadeWithFeather_TransClipping.shader" />
-     <None Include="Assets\Asset Packs\Post-Processing-main\Assets\Color Correction\ColorCorrection.shader" />
-     <None Include="Assets\Asset Packs\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\Tess\ToonColor_ShadingGradeMap_Transparent_Tess.shader" />
-     <None Include="Assets\Asset Packs\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\ToonColor_ShadingGradeMap_AngelRing_TransClipping.shader" />
-     <None Include="Assets\Asset Packs\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\ToonColor_ShadingGradeMap_AngelRing.shader" />
-     <None Include="Assets\Asset Packs\Post-Processing-main\Assets\Color Correction\Gamma.shader" />
-     <None Include="Assets\Asset Packs\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\Tess\Toon_ShadingGradeMap_AngelRing_Tess_Light_StencilOut.shader" />
-     <None Include="Assets\Asset Packs\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\Toon_DoubleShadeWithFeather_TransClipping_StencilMask.shader" />
-     <None Include="Assets\Asset Packs\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\Tess\ToonColor_DoubleShadeWithFeather_Tess.shader" />
-     <None Include="Assets\Asset Packs\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\Tess\Toon_DoubleShadeWithFeather_Tess_StencilOut.shader" />
-     <None Include="Assets\Asset Packs\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\Toon_ShadingGradeMap_Mobile.shader" />
-     <None Include="Assets\Asset Packs\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\Toon_ShadingGradeMap_TransClipping_StencilMask.shader" />
-     <None Include="Assets\Asset Packs\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\Toon_DoubleShadeWithFeather_StencilOut.shader" />
-     <None Include="Assets\Asset Packs\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\Tess\Toon_DoubleShadeWithFeather_TransClipping_Tess_StencilOut.shader" />
-     <None Include="Assets\Asset Packs\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\Tess\Toon_ShadingGradeMap_AngelRing_Tess.shader" />
-     <None Include="Assets\Asset Packs\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\Tess\ToonColor_DoubleShadeWithFeather_TransClipping_Tess_StencilMask.shader" />
-     <None Include="Assets\Asset Packs\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\Toon_DoubleShadeWithFeather_Clipping_StencilMask.shader" />
-     <None Include="Assets\Asset Packs\unity-chan!\Unity-chan! Model\Art\UnityChanShader\Shader\Unitychan_chara_hada_blend.shader" />
-     <None Include="Assets\Asset Packs\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\Toon_ShadingGradeMap_AngelRing.shader" />
-     <None Include="Assets\Asset Packs\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\Toon_ShadingGradeMap_StencilMask.shader" />
-     <None Include="Assets\Asset Packs\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\Toon_ShadingGradeMap.shader" />
-     <None Include="Assets\Asset Packs\Post-Processing-main\Assets\Bloom\Bloom.shader" />
-     <None Include="Assets\Asset Packs\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\ToonColor_DoubleShadeWithFeather_Transparent_StencilOut.shader" />
-     <None Include="Assets\Asset Packs\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\Tess\ToonColor_DoubleShadeWithFeather_Clipping_Tess.shader" />
-     <None Include="Assets\Asset Packs\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\ToonColor_ShadingGradeMap_TransClipping_StencilMask.shader" />
-     <None Include="Assets\Asset Packs\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\Toon_DoubleShadeWithFeather.shader" />
-     <None Include="Assets\Asset Packs\unity-chan!\Unity-chan! Model\Art\UnityChanShader\Shader\Unitychan_chara_eye.shader" />
-     <None Include="Assets\Asset Packs\Post-Processing-main\Assets\Blur\Blur.shader" />
-     <None Include="Assets\Asset Packs\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\Toon_DoubleShadeWithFeather_TransClipping_StencilOut.shader" />
-     <None Include="Assets\Asset Packs\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\Tess\ToonColor_DoubleShadeWithFeather_Transparent_Tess.shader" />
-     <None Include="Assets\Asset Packs\Post-Processing-main\Assets\Kuwahara Filter\AnisotropicKuwahara.shader" />
-     <None Include="Assets\Asset Packs\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\Tess\ToonColor_ShadingGradeMap_TransClipping_Tess.shader" />
-     <None Include="Assets\Asset Packs\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\README.txt" />
-     <None Include="Assets\Asset Packs\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\Tess\ToonColor_ShadingGradeMap_AngelRing_Tess_StencilOut.shader" />
-     <None Include="Assets\Asset Packs\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\Tess\Toon_DoubleShadeWithFeather_Clipping_Tess_StencilMask.shader" />
-     <None Include="Assets\Asset Packs\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\Tess\ToonColor_ShadingGradeMap_Tess_StencilOut.shader" />
-     <None Include="Assets\Asset Packs\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\ToonColor_DoubleShadeWithFeather_Clipping_StencilMask.shader" />
-     <None Include="Assets\Asset Packs\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\ToonColor_DoubleShadeWithFeather_Clipping.shader" />
-     <None Include="Assets\Asset Packs\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\Toon_ShadingGradeMap_Mobile_TransClipping.shader" />
-     <None Include="Assets\Asset Packs\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\UCTS_ShadingGradeMap.cginc" />
-     <None Include="Assets\Asset Packs\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\UCTS_Outline.cginc" />
-     <None Include="Assets\Asset Packs\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\Tess\Toon_ShadingGradeMap_Tess_StencilMask.shader" />
-     <None Include="Assets\Asset Packs\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\Toon_DoubleShadeWithFeather_Mobile.shader" />
-     <None Include="Assets\Asset Packs\Post-Processing-main\Assets\Pixel Art\Dither.shader" />
-     <None Include="Assets\Asset Packs\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\Tess\ToonColor_ShadingGradeMap_Transparent_Tess_StencilOut.shader" />
-     <None Include="Assets\Asset Packs\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\Tess\UCTS_DoubleShadeWithFeather_tess.cginc" />
-     <None Include="Assets\Asset Packs\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\Tess\Toon_ShadingGradeMap_TransClipping_Tess_StencilMask.shader" />
-     <None Include="Assets\Asset Packs\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\Toon_ShadingGradeMap_AngelRing_Mobile_StencilOut.shader" />
-     <None Include="Assets\Asset Packs\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\Tess\UCTS_ShadingGradeMap_tess.cginc" />
-     <None Include="Assets\Asset Packs\Post-Processing-main\Assets\Color Blindness\Deuteranomaly.cginc" />
-     <None Include="Assets\Asset Packs\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\ToonColor_ShadingGradeMap_TransClipping.shader" />
-     <None Include="Assets\Asset Packs\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\Toon_DoubleShadeWithFeather_Clipping_StencilOut.shader" />
-     <None Include="Assets\Asset Packs\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\ToonColor_DoubleShadeWithFeather_StencilOut.shader" />
-     <None Include="Assets\Asset Packs\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\Toon_OutlineObject_StencilOut.shader" />
-     <None Include="Assets\Asset Packs\Post-Processing-main\Assets\Blend Modes\BlendModes.shader" />
-     <None Include="Assets\Asset Packs\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\Tess\Toon_DoubleShadeWithFeather_Tess_Light_StencilOut.shader" />
-     <None Include="Assets\Asset Packs\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\Tess\ToonColor_ShadingGradeMap_TransClipping_Tess_StencilOut.shader" />
-     <None Include="Assets\Asset Packs\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\UCTS_ShadowCaster.cginc" />
-     <None Include="Assets\Asset Packs\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\Toon_ShadingGradeMap_TransClipping.shader" />
-     <None Include="Assets\Asset Packs\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\ToonColor_ShadingGradeMap_Transparent_StencilOut.shader" />
-     <None Include="Assets\Asset Packs\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\Toon_DoubleShadeWithFeather_Mobile_StencilMask.shader" />
-     <None Include="Assets\Asset Packs\Post-Processing-main\Assets\Tone Mapping\Tonemapping.shader" />
-     <None Include="Assets\Asset Packs\unity-chan!\Unity-chan! Model\Art\UnityChanShader\Shader\Unitychan_chara_hair.shader" />
-     <None Include="Assets\Asset Packs\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\Tess\Toon_ShadingGradeMap_TransClipping_Tess.shader" />
-     <None Include="Assets\Asset Packs\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\Tess\Toon_DoubleShadeWithFeather_Tess.shader" />
-     <None Include="Assets\Asset Packs\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\UCTS_Outline2.cginc" />
-     <None Include="Assets\Asset Packs\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\Tess\Toon_DoubleShadeWithFeather_TransClipping_Tess.shader" />
-     <None Include="Assets\Asset Packs\Post-Processing-main\Assets\Color Blindness\ColorBlindness.shader" />
-     <None Include="Assets\Asset Packs\Post-Processing-main\Assets\Edge Detection\ExtendedDoG.shader" />
-     <None Include="Assets\Asset Packs\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\ToonColor_ShadingGradeMap.shader" />
-     <None Include="Assets\Asset Packs\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\Tess\ToonColor_ShadingGradeMap_TransClipping_Tess_StencilMask.shader" />
-     <None Include="Assets\Asset Packs\unity-chan!\Unity-chan! Model\Art\UnityChanShader\Shader\Unitychan_chara_eye_blend.shader" />
-     <None Include="Assets\Asset Packs\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\Toon_ShadingGradeMap_Mobile_StencilOut.shader" />
-     <None Include="Assets\Asset Packs\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\Tess\Toon_ShadingGradeMap_Tess_Light_StencilMask.shader" />
+     <Compile Include="Library\PackageCache\com.unity.render-pipelines.core@12.1.7\ShaderLibrary\DummyShaderLibrary.cs" />
+     <None Include="Library\PackageCache\com.unity.render-pipelines.core@12.1.7\ShaderLibrary\API\Validate.hlsl" />
+     <None Include="Library\PackageCache\com.unity.render-pipelines.core@12.1.7\ShaderLibrary\Debug.hlsl" />
+     <None Include="Library\PackageCache\com.unity.render-pipelines.core@12.1.7\ShaderLibrary\Sampling\SampleUVMappingInternal.hlsl" />
+     <None Include="Library\PackageCache\com.unity.render-pipelines.core@12.1.7\ShaderLibrary\Random.hlsl" />
+     <None Include="Library\PackageCache\com.unity.render-pipelines.core@12.1.7\ShaderLibrary\Refraction.hlsl" />
+     <None Include="Library\PackageCache\com.unity.render-pipelines.core@12.1.7\ShaderLibrary\UnityInstancing.hlsl" />
+     <None Include="Library\PackageCache\com.unity.render-pipelines.core@12.1.7\ShaderLibrary\SDF2D.hlsl" />
+     <None Include="Library\PackageCache\com.unity.render-pipelines.core@12.1.7\ShaderLibrary\EntityLighting.hlsl" />
+     <None Include="Library\PackageCache\com.unity.render-pipelines.core@12.1.7\ShaderLibrary\Color.hlsl" />
+     <None Include="Library\PackageCache\com.unity.render-pipelines.core@12.1.7\ShaderLibrary\Macros.hlsl" />
+     <None Include="Library\PackageCache\com.unity.render-pipelines.core@12.1.7\ShaderLibrary\Sampling\Fibonacci.hlsl" />
+     <None Include="Library\PackageCache\com.unity.render-pipelines.core@12.1.7\ShaderLibrary\CommonLighting.hlsl" />
+     <None Include="Library\PackageCache\com.unity.render-pipelines.core@12.1.7\ShaderLibrary\Sampling\SampleUVMapping.hlsl" />
+     <None Include="Library\PackageCache\com.unity.render-pipelines.core@12.1.7\ShaderLibrary\API\GLES3.hlsl" />
+     <None Include="Library\PackageCache\com.unity.render-pipelines.core@12.1.7\ShaderLibrary\CommonMaterial.hlsl" />
+     <None Include="Library\PackageCache\com.unity.render-pipelines.core@12.1.7\ShaderLibrary\Filtering.hlsl" />
+     <None Include="Library\PackageCache\com.unity.render-pipelines.core@12.1.7\ShaderLibrary\API\Metal.hlsl" />
+     <None Include="Library\PackageCache\com.unity.render-pipelines.core@12.1.7\ShaderLibrary\Sampling\Sampling.hlsl" />
+     <None Include="Library\PackageCache\com.unity.render-pipelines.core@12.1.7\ShaderLibrary\API\Vulkan.hlsl" />
+     <None Include="Library\PackageCache\com.unity.render-pipelines.core@12.1.7\ShaderLibrary\PhysicalCamera.hlsl" />
+     <None Include="Library\PackageCache\com.unity.render-pipelines.core@12.1.7\ShaderLibrary\Common.hlsl" />
+     <None Include="Library\PackageCache\com.unity.render-pipelines.core@12.1.7\ShaderLibrary\ACES.hlsl" />
+     <None Include="Library\PackageCache\com.unity.render-pipelines.core@12.1.7\ShaderLibrary\GraniteShaderLibBase.hlsl" />
+     <None Include="Library\PackageCache\com.unity.render-pipelines.core@12.1.7\ShaderLibrary\SpaceFillingCurves.hlsl" />
+     <None Include="Library\PackageCache\com.unity.render-pipelines.core@12.1.7\ShaderLibrary\Unity.RenderPipelines.Core.ShaderLibrary.asmdef" />
+     <None Include="Library\PackageCache\com.unity.render-pipelines.core@12.1.7\ShaderLibrary\VolumeRendering.hlsl" />
+     <None Include="Library\PackageCache\com.unity.render-pipelines.core@12.1.7\ShaderLibrary\Version.hlsl" />
+     <None Include="Library\PackageCache\com.unity.render-pipelines.core@12.1.7\ShaderLibrary\NormalSurfaceGradient.hlsl" />
+     <None Include="Library\PackageCache\com.unity.render-pipelines.core@12.1.7\ShaderLibrary\ParallaxMapping.hlsl" />
+     <None Include="Library\PackageCache\com.unity.render-pipelines.core@12.1.7\ShaderLibrary\SpaceTransforms.hlsl" />
+     <None Include="Library\PackageCache\com.unity.render-pipelines.core@12.1.7\ShaderLibrary\API\GLCore.hlsl" />
+     <None Include="Library\PackageCache\com.unity.render-pipelines.core@12.1.7\ShaderLibrary\BC6H.hlsl" />
+     <None Include="Library\PackageCache\com.unity.render-pipelines.core@12.1.7\ShaderLibrary\API\GLES2.hlsl" />
+     <None Include="Library\PackageCache\com.unity.render-pipelines.core@12.1.7\ShaderLibrary\MetaPass.hlsl" />
+     <None Include="Library\PackageCache\com.unity.render-pipelines.core@12.1.7\ShaderLibrary\CommonShadow.hlsl" />
+     <None Include="Library\PackageCache\com.unity.render-pipelines.core@12.1.7\ShaderLibrary\API\Switch.hlsl" />
+     <None Include="Library\PackageCache\com.unity.render-pipelines.core@12.1.7\ShaderLibrary\TextureStack.hlsl" />
+     <None Include="Library\PackageCache\com.unity.render-pipelines.core@12.1.7\ShaderLibrary\Texture.hlsl" />
+     <None Include="Library\PackageCache\com.unity.render-pipelines.core@12.1.7\ShaderLibrary\UnityDOTSInstancing.hlsl" />
+     <None Include="Library\PackageCache\com.unity.render-pipelines.core@12.1.7\ShaderLibrary\Sampling\SampleUVMappingNormalInternal.hlsl" />
+     <None Include="Library\PackageCache\com.unity.render-pipelines.core@12.1.7\ShaderLibrary\PerPixelDisplacement.hlsl" />
+     <None Include="Library\PackageCache\com.unity.render-pipelines.core@12.1.7\ShaderLibrary\AreaLighting.hlsl" />
+     <None Include="Library\PackageCache\com.unity.render-pipelines.core@12.1.7\ShaderLibrary\Sampling\Hammersley.hlsl" />
+     <None Include="Library\PackageCache\com.unity.render-pipelines.core@12.1.7\ShaderLibrary\CommonDeprecated.hlsl" />
+     <None Include="Library\PackageCache\com.unity.render-pipelines.core@12.1.7\ShaderLibrary\API\D3D11.hlsl" />
+     <None Include="Library\PackageCache\com.unity.render-pipelines.core@12.1.7\ShaderLibrary\Packing.hlsl" />
+     <None Include="Library\PackageCache\com.unity.render-pipelines.core@12.1.7\ShaderLibrary\Tessellation.hlsl" />
+     <None Include="Library\PackageCache\com.unity.render-pipelines.core@12.1.7\ShaderLibrary\BSDF.hlsl" />
+     <None Include="Library\PackageCache\com.unity.render-pipelines.core@12.1.7\ShaderLibrary\ImageBasedLighting.hlsl" />
+     <None Include="Library\PackageCache\com.unity.render-pipelines.core@12.1.7\ShaderLibrary\GeometricTools.hlsl" />
+     <None Include="Library\PackageCache\com.unity.render-pipelines.core@12.1.7\ShaderLibrary\VirtualTexturing.hlsl" />
+     <None Include="Library\PackageCache\com.unity.render-pipelines.core@12.1.7\ShaderLibrary\Shadow\ShadowSamplingTent.hlsl" />
     <Reference Include="UnityEngine">
         <HintPath>C:\Users\gigio\OneDrive\Área de Trabalho\ETC\licenses\2021.3.5f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>
@@ -480,6 +331,39 @@
     </Reference>
     <Reference Include="UnityEditor.UnityConnectModule">
         <HintPath>C:\Users\gigio\OneDrive\Área de Trabalho\ETC\licenses\2021.3.5f1\Editor\Data\Managed\UnityEngine\UnityEditor.UnityConnectModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.Graphs">
+        <HintPath>C:\Users\gigio\OneDrive\Área de Trabalho\ETC\licenses\2021.3.5f1\Editor\Data\Managed\UnityEditor.Graphs.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.WebGL.Extensions">
+        <HintPath>C:\Users\gigio\OneDrive\Área de Trabalho\ETC\licenses\2021.3.5f1\Editor\Data\PlaybackEngines\WebGLSupport\UnityEditor.WebGL.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.WindowsStandalone.Extensions">
+        <HintPath>C:\Users\gigio\OneDrive\Área de Trabalho\ETC\licenses\2021.3.5f1\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.LinuxStandalone.Extensions">
+        <HintPath>C:\Users\gigio\OneDrive\Área de Trabalho\ETC\licenses\2021.3.5f1\Editor\Data\PlaybackEngines\LinuxStandaloneSupport\UnityEditor.LinuxStandalone.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Plastic.Newtonsoft.Json">
+        <HintPath>C:\Users\gigio\MyOwnGames\SoulsLike\Library\PackageCache\com.unity.collab-proxy@1.15.18\Lib\Editor\PlasticSCM\Unity.Plastic.Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Plastic.Antlr3.Runtime">
+        <HintPath>C:\Users\gigio\MyOwnGames\SoulsLike\Library\PackageCache\com.unity.collab-proxy@1.15.18\Lib\Editor\PlasticSCM\Unity.Plastic.Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.VisualScripting.YamlDotNet">
+        <HintPath>C:\Users\gigio\MyOwnGames\SoulsLike\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll</HintPath>
+    </Reference>
+    <Reference Include="unityplastic">
+        <HintPath>C:\Users\gigio\MyOwnGames\SoulsLike\Library\PackageCache\com.unity.collab-proxy@1.15.18\Lib\Editor\PlasticSCM\unityplastic.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.VisualScripting.TextureAssets">
+        <HintPath>C:\Users\gigio\MyOwnGames\SoulsLike\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\EditorAssetResources\Unity.VisualScripting.TextureAssets.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.VisualScripting.IonicZip">
+        <HintPath>C:\Users\gigio\MyOwnGames\SoulsLike\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll</HintPath>
+    </Reference>
+    <Reference Include="log4netPlastic">
+        <HintPath>C:\Users\gigio\MyOwnGames\SoulsLike\Library\PackageCache\com.unity.collab-proxy@1.15.18\Lib\Editor\PlasticSCM\log4netPlastic.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
         <HintPath>C:\Users\gigio\MyOwnGames\SoulsLike\Library\PackageCache\com.unity.visualscripting@1.7.8\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
@@ -858,137 +742,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="Unity.VisualScripting.Flow.Editor.csproj">
-      <Project>{fdd8b922-f7b2-240e-7c41-6b6c46d35428}</Project>
-      <Name>Unity.VisualScripting.Flow.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.VSCode.Editor.csproj">
-      <Project>{897e46d4-9d67-a863-d63c-c8c710af9abe}</Project>
-      <Name>Unity.VSCode.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.TextMeshPro.Editor.csproj">
-      <Project>{84841e4e-f907-0009-10a9-222830932c7e}</Project>
-      <Name>Unity.TextMeshPro.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.Performance.Profile-Analyzer.Editor.csproj">
-      <Project>{a485b3ce-bde0-3f0f-339d-7f1ae5050e24}</Project>
-      <Name>Unity.Performance.Profile-Analyzer.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.TestTools.CodeCoverage.Editor.OpenCover.Model.csproj">
-      <Project>{4909c612-e59f-2ae5-f016-80150592701e}</Project>
-      <Name>Unity.TestTools.CodeCoverage.Editor.OpenCover.Model</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.VisualStudio.Editor.csproj">
-      <Project>{240c20cb-acc7-ec22-4de2-0eb06fe97720}</Project>
-      <Name>Unity.VisualStudio.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.Sysroot.Linux_x86_64.csproj">
-      <Project>{fb43dd06-39ab-756e-da29-35540a2fffd9}</Project>
-      <Name>Unity.Sysroot.Linux_x86_64</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.Timeline.csproj">
-      <Project>{cad5a212-31cc-08c5-33e6-dae5d39bb7b0}</Project>
-      <Name>Unity.Timeline</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.VisualScripting.Core.Editor.csproj">
-      <Project>{1b9ba52d-e472-03d6-d3bd-e5419fdb97db}</Project>
-      <Name>Unity.VisualScripting.Core.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.TextMeshPro.csproj">
-      <Project>{05f2d0b1-4520-cc02-a26b-be3b35325b61}</Project>
-      <Name>Unity.TextMeshPro</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.VisualScripting.State.Editor.csproj">
-      <Project>{d222d313-03b7-1302-e41f-ee3ce96dbc84}</Project>
-      <Name>Unity.VisualScripting.State.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.VisualScripting.SettingsProvider.Editor.csproj">
-      <Project>{80687da6-2b86-21f9-a222-003b10556b5e}</Project>
-      <Name>Unity.VisualScripting.SettingsProvider.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Boxophobic.Utils.Editor.csproj">
-      <Project>{2a13110d-3b82-94a8-a901-b4d783d7d5b5}</Project>
-      <Name>Boxophobic.Utils.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection.csproj">
-      <Project>{f416ad71-a4cb-cfee-8f97-fe38c6e38ece}</Project>
-      <Name>Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.VisualScripting.Flow.csproj">
-      <Project>{b8c8c90f-d35d-a23b-d1fe-01856967a905}</Project>
-      <Name>Unity.VisualScripting.Flow</Name>
-    </ProjectReference>
     <ProjectReference Include="UnityEditor.UI.csproj">
       <Project>{f2e66aa0-dd7d-63f3-b0d3-b6347f6e3647}</Project>
       <Name>UnityEditor.UI</Name>
     </ProjectReference>
-    <ProjectReference Include="Unity.InputSystem.csproj">
-      <Project>{8d8d43b0-83bb-2706-d32c-5cb0e7b50693}</Project>
-      <Name>Unity.InputSystem</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.Rider.Editor.csproj">
-      <Project>{0a5e531b-4e6d-15bb-0ea3-f963be3c5b8a}</Project>
-      <Name>Unity.Rider.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.PlasticSCM.Editor.csproj">
-      <Project>{eb627d29-ad19-52e5-82a1-56d9b7f05647}</Project>
-      <Name>Unity.PlasticSCM.Editor</Name>
-    </ProjectReference>
     <ProjectReference Include="UnityEngine.UI.csproj">
       <Project>{b5f78850-4f0c-edfb-084f-0a010d593e4d}</Project>
       <Name>UnityEngine.UI</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.EditorCoroutines.Editor.csproj">
-      <Project>{36af41a6-3dd8-798d-d7ee-35f9622e0418}</Project>
-      <Name>Unity.EditorCoroutines.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.VisualScripting.Core.csproj">
-      <Project>{2ed6ee43-bc8f-f254-5b80-06b82002c805}</Project>
-      <Name>Unity.VisualScripting.Core</Name>
-    </ProjectReference>
-    <ProjectReference Include="Boxophobic.SkyboxCubemapExtended.Editor.csproj">
-      <Project>{29e28d0b-e5c2-da40-da7e-a0c9df5f017e}</Project>
-      <Name>Boxophobic.SkyboxCubemapExtended.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Boxophobic.Utils.Scripts.csproj">
-      <Project>{3b3944c2-3d69-b38b-3a93-927150abbca5}</Project>
-      <Name>Boxophobic.Utils.Scripts</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.Services.Core.csproj">
-      <Project>{71de2bcc-23e5-d848-e657-eff3140da526}</Project>
-      <Name>Unity.Services.Core</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.Services.Core.Analytics.csproj">
-      <Project>{80d12a86-660f-652d-19cb-3f308fba77ff}</Project>
-      <Name>Unity.Services.Core.Analytics</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.VisualScripting.Shared.Editor.csproj">
-      <Project>{07682a3b-cf81-57d2-6714-a21ba64ae732}</Project>
-      <Name>Unity.VisualScripting.Shared.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.Services.Core.Environments.csproj">
-      <Project>{a2e77c04-3616-3e69-a6b5-6adb2488b234}</Project>
-      <Name>Unity.Services.Core.Environments</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.Toolchain.Win-x86_64-Linux-x86_64.csproj">
-      <Project>{4c6d4004-24ea-bead-dcd2-5f48fd561c25}</Project>
-      <Name>Unity.Toolchain.Win-x86_64-Linux-x86_64</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.Timeline.Editor.csproj">
-      <Project>{bc842c61-8954-0412-35e7-70eb88955aed}</Project>
-      <Name>Unity.Timeline.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.TestTools.CodeCoverage.Editor.csproj">
-      <Project>{e2470283-464b-437e-4960-6c0f6382fe8b}</Project>
-      <Name>Unity.TestTools.CodeCoverage.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.VisualScripting.State.csproj">
-      <Project>{e47ab485-3a18-c25a-69d4-132221c5b2ae}</Project>
-      <Name>Unity.VisualScripting.State</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.SysrootPackage.Editor.csproj">
-      <Project>{19cd2af2-238b-be07-8f07-07f4ca3eb43f}</Project>
-      <Name>Unity.SysrootPackage.Editor</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
