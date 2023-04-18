@@ -19,7 +19,7 @@ namespace Dark
         private void Awake() 
         {
             animator = GetComponent<Animator>();
-            quickSlotsUI = GetComponent<QuickSlotsUI>();
+            quickSlotsUI = FindObjectOfType<QuickSlotsUI>();
 
             WeaponHolderSlot[]  weaponHolderSlots = GetComponentsInChildren<WeaponHolderSlot>(); 
             foreach (WeaponHolderSlot weaponHolderSlot in weaponHolderSlots)

@@ -12,7 +12,7 @@ namespace Dark
 
         public void UpdateWeaponQuickSlotsUI(bool isLeft, WeaponItem weapon)
         {
-            if (!isLeft)
+            if (isLeft == false)
             {
                 if (weapon.itemIcon != null)
                 {
@@ -30,7 +30,7 @@ namespace Dark
                 if (weapon.itemIcon != null)
                 {
                     leftWeaponIcon.sprite = weapon.itemIcon;
-                    leftWeaponIcon.enabled = enabled;
+                    leftWeaponIcon.enabled = true;
                 }
                 else
                 {
