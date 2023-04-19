@@ -13,6 +13,7 @@ namespace Dark
         public float mouseY;
 
         public bool b_Input;
+        public bool a_Input;
         public bool rb_Input;
         public bool rt_Input;
         public bool d_Pad_Up;
@@ -63,6 +64,7 @@ namespace Dark
             HandleRollInput(delta);
             HandleAttackInput(delta);
             HandleQuickSlotInput();
+            HandleInteractingButtonInput();
         }
 
         private void MoveInput(float delta)
@@ -137,6 +139,11 @@ namespace Dark
             {
                 playerInventory.ChangeLeftWeapon();
             }
+        }
+
+        private void HandleInteractingButtonInput()
+        {
+            inputActions.PlayerActions.A.performed += i => a_Input = true;
         }
     }
 }

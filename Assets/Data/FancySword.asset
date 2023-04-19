@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f60cb699c00a6bf4ea93bf2010d5ea19, type: 3}
   m_Name: FancySword
   m_EditorClassIdentifier: 
-  itemIcon: {fileID: 0}
+  itemIcon: {fileID: 21300000, guid: 172774604c1bee84185a69041576525b, type: 3}
   itemName: Sword_2
   modelPrefab: {fileID: 6039941270350271461, guid: f5fe98c8f418b454da6927f38c398c84, type: 3}
   isUnarmed: 0
@@ -21,3 +21,6 @@ MonoBehaviour:
   OH_Light_Attack_1: OH_Light_Attack_01
   OH_Light_Attack_2: OH_Light_Attack_02
   OH_Heavy_Attack_1: OH_Heavy_Attack_01
+  baseStamina: 0
+  lightAttackMultiplier: 0
+  heavyAttackMultiplier: 0
