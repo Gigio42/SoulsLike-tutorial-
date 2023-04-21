@@ -11,6 +11,10 @@ namespace Dark
         CameraHandler cameraHandler;
         PlayerLocomotion playerLocomotion;
 
+        InteractableUI interactableUI;
+        public GameObject interactableUIGameObject;
+        public GameObject itemInteractableGameObject;
+
         public bool isInteracting;
 
         [Header("Player Flags")]
@@ -30,6 +34,7 @@ namespace Dark
             inputHandler = GetComponent<InputHandler>();
             animator = GetComponentInChildren<Animator>();
             playerLocomotion = GetComponent<PlayerLocomotion>();
+            interactableUI = FindObjectOfType<InteractableUI>();
         }
 
         void Update()
@@ -90,15 +95,26 @@ namespace Dark
                     if (interactableObject != null)
                     {
                         string interactableText = interactableObject.interactableText;
-                        //set the UI txt to be interactable obj txt
-                        //set the UI pop up
+                        interactableUI.interactableText.text = interactableText; 
+                        interactableUIGameObject.SetActive(true);
 
                         if (inputHandler.a_Input)
                         {
                             hit.collider.GetComponent<Interactable>().Interact(this);
-                            Debug.Log("youre pressing enter");
                         }
                     }
+                }
+            }
+            else
+            {
+                if (interactableUIGameObject != null)
+                {
+                    interactableUIGameObject.SetActive(false);
+                }
+
+                if (itemInteractableGameObject != null && inputHandler.a_Input)
+                {
+                    itemInteractableGameObject.SetActive(false);
                 }
             }
             
