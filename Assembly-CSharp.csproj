@@ -84,6 +84,8 @@
      <Compile Include="Assets\Scripts\PlayerInventory.cs" />
      <Compile Include="Assets\Asset Packs\Post-Processing-main\Assets\Edge Detection\ExtendedDoG.cs" />
      <Compile Include="Assets\WeaponInventorySlot.cs" />
+     <Compile Include="Assets\EquipmentWindowUI.cs" />
+     <Compile Include="Assets\HandEquipmentSlotUI.cs" />
      <None Include="Assets\Asset Packs\unity-chan!\Unity-chan! Model\Art\UnityChanShader\Shader\Unitychan_chara_fuku.shader" />
      <None Include="Assets\Asset Packs\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\Toon_DoubleShadeWithFeather_Mobile_TransClipping_StencilMask.shader" />
      <None Include="Assets\Asset Packs\Synty - Polygon Student Sample - Copia\README - Usage Rights for these assets.txt" />
