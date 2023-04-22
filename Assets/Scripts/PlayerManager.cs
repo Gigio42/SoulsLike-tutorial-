@@ -43,11 +43,13 @@ namespace Dark
 
             isInteracting = animator.GetBool("isInteracting");
             canDoCombo = animator.GetBool("canDoCombo");
+            animator.SetBool("isInAir", isInAir);
 
             inputHandler.TickInput(delta);
             playerLocomotion.HandleMovment(delta);
             playerLocomotion.HandleRollingAndSprinting(delta);
             playerLocomotion.HandleFalling(delta, playerLocomotion.moveDirection);
+            playerLocomotion.HandleJumping();
 
             CheckForInteractableObject();
 
@@ -75,6 +77,7 @@ namespace Dark
             inputHandler.d_Pad_Left = false;
             inputHandler.d_Pad_Right = false;
             inputHandler.a_Input = false;
+            inputHandler.jump_Input = false;
 
             if (isInAir)
             {
