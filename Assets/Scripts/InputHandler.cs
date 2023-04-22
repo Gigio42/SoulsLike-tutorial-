@@ -170,10 +170,14 @@ namespace Dark
                 if (inventoryFlag)
                 {
                     uIManager.OpenSelectWindow();
+                    uIManager.UpdateUI();
+                    uIManager.hudWindow.SetActive(false);
                 }
                 else
                 {
                     uIManager.CloseSelectWindow();
+                    uIManager.CloseAllInventoryWindows();
+                    uIManager.hudWindow.SetActive(true);
                 }
             }
         }
