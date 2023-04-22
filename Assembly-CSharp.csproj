@@ -46,6 +46,7 @@
      <Compile Include="Assets\Scripts\InputHandler.cs" />
      <Compile Include="Assets\Asset Packs\Post-Processing-main\Assets\Color Correction\HueShifter.cs" />
      <Compile Include="Assets\Asset Packs\Post-Processing-main\Assets\Tone Mapping\Tonemapper.cs" />
+     <Compile Include="Assets\Scripts\UIManager.cs" />
      <Compile Include="Assets\Scripts\QuickSlotsUI.cs" />
      <Compile Include="Assets\Asset Packs\Post-Processing-main\Assets\Vignette\Vignette.cs" />
      <Compile Include="Assets\Asset Packs\Post-Processing-main\Assets\Color Correction\ColorCorrection.cs" />
@@ -67,6 +68,7 @@
      <Compile Include="Assets\Scripts\PlayerControls.cs" />
      <Compile Include="Assets\Scripts\StaminaBar.cs" />
      <Compile Include="Assets\Asset Packs\Post-Processing-main\Assets\Pixel Art\Ditherer.cs" />
+     <Compile Include="Assets\Scripts\InteractableUI.cs" />
      <Compile Include="Assets\Scripts\HealthBar.cs" />
      <Compile Include="Assets\Scripts\WeaponSlotManager.cs" />
      <Compile Include="Assets\Asset Packs\Post-Processing-main\Assets\ImageBlitter\ImageBlitter.cs" />
@@ -81,7 +83,6 @@
      <Compile Include="Assets\Asset Packs\Post-Processing-main\Assets\Bloom\Bloom.cs" />
      <Compile Include="Assets\Scripts\PlayerInventory.cs" />
      <Compile Include="Assets\Asset Packs\Post-Processing-main\Assets\Edge Detection\ExtendedDoG.cs" />
-     <Compile Include="Assets\InteractableUI.cs" />
      <None Include="Assets\Asset Packs\unity-chan!\Unity-chan! Model\Art\UnityChanShader\Shader\Unitychan_chara_fuku.shader" />
      <None Include="Assets\Asset Packs\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\Toon_DoubleShadeWithFeather_Mobile_TransClipping_StencilMask.shader" />
      <None Include="Assets\Asset Packs\Synty - Polygon Student Sample - Copia\README - Usage Rights for these assets.txt" />
