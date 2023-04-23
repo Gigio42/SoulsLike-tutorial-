@@ -54,6 +54,13 @@ namespace Dark
                 inputActions = new PlayerControls();
                 inputActions.Playermovement.Movement.performed += inputActions => movementInput = inputActions.ReadValue<Vector2>();
                 inputActions.Playermovement.Camera.performed += i => cameraInput = i.ReadValue<Vector2>();
+                inputActions.PlayerActions.RB.performed += i => rb_Input = true;
+                inputActions.PlayerActions.RT.performed += i => rt_Input = true;
+                inputActions.PlayerQuickSlots.DPadRight1.performed += i => d_Pad_Right = true;
+                inputActions.PlayerQuickSlots.DPadLeft1.performed += i => d_Pad_Left = true;
+                inputActions.PlayerActions.A.performed += i => a_Input = true;
+                inputActions.PlayerActions.Jump.performed += i => jump_Input = true;
+                inputActions.PlayerActions.Inventory.performed += i => inventory_Input = true;
             }
 
             inputActions.Enable();
@@ -70,8 +77,6 @@ namespace Dark
             HandleRollInput(delta);
             HandleAttackInput(delta);
             HandleQuickSlotInput();
-            HandleInteractingButtonInput();
-            HandleJumpInput();
             HandleInventoryInput();
         }
 
@@ -87,11 +92,11 @@ namespace Dark
         private void HandleRollInput(float delta)
         {
             b_Input = inputActions.PlayerActions.Roll.phase == UnityEngine.InputSystem.InputActionPhase.Started;
+            sprintFlag = b_Input;
 
             if (b_Input)
             {
                 rollInputTimer += delta;
-                sprintFlag = true;
             }
             else
             {
@@ -107,9 +112,6 @@ namespace Dark
 
         private void HandleAttackInput(float delta)
         {
-            inputActions.PlayerActions.RB.performed += i => rb_Input = true;
-            inputActions.PlayerActions.RT.performed += i => rt_Input = true;
-
             //RB input handles the RIGHT hand weapo's light attack
             if (rb_Input)
             {
@@ -136,9 +138,6 @@ namespace Dark
     
         private void HandleQuickSlotInput()
         {
-            inputActions.PlayerQuickSlots.DPadRight1.performed += i => d_Pad_Right = true;
-            inputActions.PlayerQuickSlots.DPadLeft1.performed += i => d_Pad_Left = true;
-
             if (d_Pad_Right)
             {
                 playerInventory.ChangeRightWeapon();
@@ -149,20 +148,8 @@ namespace Dark
             }
         }
 
-        private void HandleInteractingButtonInput()
-        {
-            inputActions.PlayerActions.A.performed += i => a_Input = true;
-        }
-
-        private void HandleJumpInput()
-        {
-            inputActions.PlayerActions.Jump.performed += i => jump_Input = true;
-        }
-
         private void HandleInventoryInput()
         {
-            inputActions.PlayerActions.Inventory.performed += i => inventory_Input = true;
-
             if (inventory_Input)
             {
                 inventoryFlag = !inventoryFlag;
