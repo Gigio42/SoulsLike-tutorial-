@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Dark
 {
-    public class PlayerManager : MonoBehaviour
+    public class PlayerManager : CharacterManager
     {
         InputHandler inputHandler;
         Animator animator;

@@ -173,6 +173,15 @@
                     "initialStateCheck": false
                 },
                 {
+                    "name": "LockOn",
+                    "type": "Button",
+                    "id": "002acafc-f8bc-4380-bb43-fdde4d1071f5",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
                     "name": "Roll",
                     "type": "Button",
                     "id": "8b72c10a-cca9-4340-817c-12b2fe271964",
@@ -337,6 +346,28 @@
                     "processors": "",
                     "groups": "",
                     "action": "Inventory",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "4e474438-46ec-45b5-a3b8-36ee0ab6d722",
+                    "path": "<Keyboard>/f",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "LockOn",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "f2941474-d6c4-445e-9446-eb3d93eeeb44",
+                    "path": "<Gamepad>/rightStickPress",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "LockOn",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
