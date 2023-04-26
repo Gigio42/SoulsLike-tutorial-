@@ -6,6 +6,7 @@ namespace Dark
 {
     public class PlayerLocomotion : MonoBehaviour
     {
+        CameraHandler cameraHandler;
         PlayerManager playerManager;
         Transform cameraObject;
         InputHandler inputHandler;
@@ -30,6 +31,11 @@ namespace Dark
         [SerializeField] float rotationSpeed = 10f;
         [SerializeField] float fallingSpeed = 45;
 
+        private void Awake() 
+        {
+            cameraHandler = FindObjectOfType<CameraHandler>();    
+        }
+
         void Start()
         {
             playerManager = GetComponent<PlayerManager>();
@@ -50,27 +56,63 @@ namespace Dark
 
         private void HandleRotation(float delta)
         {
-            Vector3 targetDirection = Vector3.zero;
-            float moveOverride = inputHandler.moveAmount;
-
-            targetDirection = cameraObject.forward * inputHandler.vertical;
-            targetDirection += cameraObject.right * inputHandler.horizontal;
-
-            targetDirection.Normalize();
-            targetDirection.y = 0;
-
-            if(targetDirection == Vector3.zero)
+            if (inputHandler.lockOnFlag)
             {
-                targetDirection = myTransform.forward;
+                if (inputHandler.sprintFlag || inputHandler.rollflag)
+                {
+                    Vector3 targetDirection = Vector3.zero;
+                    targetDirection = cameraHandler.cameraTransform.forward * inputHandler.vertical;
+                    targetDirection += cameraHandler.cameraTransform.right * inputHandler.horizontal;
+                    targetDirection.Normalize();
+                    targetDirection.y = 0;
+
+                    if (targetDirection == Vector3.zero)
+                    {
+                        targetDirection = transform.forward;
+                    }
+
+                    Quaternion tireRotation = Quaternion.LookRotation(targetDirection);
+                    Quaternion targetRotation = Quaternion.Slerp(transform.rotation, tireRotation, rotationSpeed * Time.deltaTime);
+
+                    transform.rotation = targetRotation;
+                }
+                else
+                {
+                    Vector3 rotationDirection = moveDirection;
+                    rotationDirection = cameraHandler.currentLockOnTarget.transform.position - transform.position;
+                    rotationDirection.y = 0;
+                    rotationDirection.Normalize();
+                    Quaternion tireRotation = Quaternion.LookRotation(rotationDirection);
+                    Quaternion targetRotation = Quaternion.Slerp(transform.rotation, tireRotation, rotationSpeed * Time.deltaTime);
+
+                    transform.rotation = targetRotation;
+                }
+                
             }
+            else
+            {
+                Vector3 targetDirection = Vector3.zero;
+                float moveOverride = inputHandler.moveAmount;
 
-            //float rs = rotationSpeed;
-            //Quaternion tr = Quaternion.LookRotation(targetDirection);
+                targetDirection = cameraObject.forward * inputHandler.vertical;
+                targetDirection += cameraObject.right * inputHandler.horizontal;
 
-            Quaternion lookRotation = Quaternion.LookRotation(targetDirection);
-            Quaternion targetRotation =  Quaternion.Slerp(myTransform.rotation, lookRotation, rotationSpeed * delta);
+                targetDirection.Normalize();
+                targetDirection.y = 0;
 
-            myTransform.rotation = targetRotation;
+                if(targetDirection == Vector3.zero)
+                {
+                    targetDirection = myTransform.forward;
+                }
+
+                //float rs = rotationSpeed;
+                //Quaternion tr = Quaternion.LookRotation(targetDirection);
+
+                Quaternion lookRotation = Quaternion.LookRotation(targetDirection);
+                Quaternion targetRotation =  Quaternion.Slerp(myTransform.rotation, lookRotation, rotationSpeed * delta);
+
+                myTransform.rotation = targetRotation;
+            }
         }
         
         public void HandleMovment(float delta)
@@ -110,7 +152,14 @@ namespace Dark
             Vector3 projectedVelocity = Vector3.ProjectOnPlane(moveDirection, normalVector);
             rigidbody.velocity = projectedVelocity;
 
-            animatorHandler.UpdateAnimatorValues(inputHandler.moveAmount, 0, playerManager.isSprinting);
+            if (inputHandler.lockOnFlag && inputHandler.sprintFlag == false)
+            {
+                animatorHandler.UpdateAnimatorValues(inputHandler.vertical, inputHandler.horizontal, playerManager.isSprinting);
+            }
+            else
+            {
+                animatorHandler.UpdateAnimatorValues(inputHandler.moveAmount, 0, playerManager.isSprinting);
+            }
 
             if (animatorHandler.canRotate)
             {
