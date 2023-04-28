@@ -11,11 +11,10 @@ namespace Dark
         public bool leftHandSlot01Selected;
         public bool leftHandSlot02Selected;
 
-        HandEquipmentSlotUI[] handEquipmentSlotUI;
+        public HandEquipmentSlotUI[] handEquipmentSlotUI;
 
         private void Start() 
         {
-            handEquipmentSlotUI = GetComponentsInChildren<HandEquipmentSlotUI>();
         }
 
         public void LoadWeaponsOnEquipmentScreen(PlayerInventory playerInventory)
