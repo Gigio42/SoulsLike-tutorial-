@@ -62,7 +62,7 @@
      <Compile Include="Assets\Scripts\EnemyStats.cs" />
      <Compile Include="Assets\Asset Packs\Post-Processing-main\Assets\Blur\Blur.cs" />
      <Compile Include="Assets\Scripts\AnimatorHandler.cs" />
-     <Compile Include="Assets\EnemyManager.cs" />
+     <Compile Include="Assets\Scripts\EnemyManager.cs" />
      <Compile Include="Assets\Asset Packs\Post-Processing-main\Assets\Pixel Art\PixelArtFilter.cs" />
      <Compile Include="Assets\Asset Packs\Post-Processing-main\Assets\Edge Detection\EdgeDetector.cs" />
      <Compile Include="Assets\Scripts\PlayerManager.cs" />
