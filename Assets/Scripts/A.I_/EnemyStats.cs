@@ -5,12 +5,8 @@ using UnityEngine;
 
 namespace Dark
 {
-    public class EnemyStats : MonoBehaviour
+    public class EnemyStats : CharacterStats
     {
-        public int healthLevel = 10;
-        public int maxHealth;
-        public int currentHealth;
-
         Animator animator;
 
         private void Awake() 

@@ -1,5 +1,86 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1020317381
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1020317382}
+  - component: {fileID: 1020317383}
+  m_Layer: 0
+  m_Name: Back Weapon Slot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1020317382
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1020317381}
+  m_LocalRotation: {x: -0.62071586, y: -0.10584181, z: -0.4485305, w: 0.63429475}
+  m_LocalPosition: {x: -0.203, y: -0.095, z: 0.236}
+  m_LocalScale: {x: 1.0000004, y: 1.0000001, z: 1.0000001}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8956344759397692077}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: -61.931, y: 63.899, z: -111.563}
+--- !u!114 &1020317383
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1020317381}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d0084ee5ec41394d88092634022dcda, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentOverride: {fileID: 1020317382}
+  currentWeapon: {fileID: 0}
+  isLeftHandSlot: 0
+  isRightHandSlot: 0
+  isBackSlot: 1
+  currentWeaponModel: {fileID: 0}
+--- !u!1 &1660250277
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1660250278}
+  m_Layer: 10
+  m_Name: Lock On Transform
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1660250278
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1660250277}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.1, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8956344760267524492}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8956344759543425829
 GameObject:
   m_ObjectHideFlags: 0
@@ -48,7 +129,7 @@ GameObject:
   - component: {fileID: 8956344760267524490}
   - component: {fileID: 8956344760267524485}
   - component: {fileID: 8956344760267524484}
-  m_Layer: 10
+  m_Layer: 9
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -68,6 +149,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8956344759397692011}
+  - {fileID: 1660250278}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -119,10 +201,25 @@ MonoBehaviour:
   mouseX: 0
   mouseY: 0
   b_Input: 0
+  a_Input: 0
+  y_Input: 0
   rb_Input: 0
   rt_Input: 0
+  jump_Input: 0
+  inventory_Input: 0
+  lockOnInput: 0
+  right_Stick_Right_Input: 0
+  right_Stick_Left_Input: 0
+  d_Pad_Up: 0
+  d_Pad_Down: 0
+  d_Pad_Left: 0
+  d_Pad_Right: 0
   rollflag: 0
+  twoHandFlag: 0
   sprintFlag: 0
+  comboFlag: 0
+  lockOnFlag: 0
+  inventoryFlag: 0
   rollInputTimer: 0
 --- !u!114 &8956344760267524495
 MonoBehaviour:
@@ -146,7 +243,7 @@ MonoBehaviour:
   groundDirectionRayDistance: -0.2
   inAirTimer: 0
   walkingSpeed: 2
-  sprintSpeed: 3
+  sprintSpeed: 2.5
   rotationSpeed: 10
   fallingSpeed: 50
 --- !u!114 &8956344760267524491
@@ -161,10 +258,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a376ee73d39a9b144af134ada0932e90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lockOnTransform: {fileID: 1660250278}
+  interactableUIGameObject: {fileID: 0}
+  itemInteractableGameObject: {fileID: 0}
   isInteracting: 0
   isSprinting: 0
   isInAir: 0
   isGrounded: 0
+  canDoCombo: 0
 --- !u!114 &8956344760267524490
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -177,8 +278,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 806c435e48221ca45a7fa3e624db0091, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rightHandWeapon: {fileID: 11400000, guid: d9a57a01ed2a92548913bbb010bf807d, type: 2}
-  leftHandWeapon: {fileID: 11400000, guid: d9a57a01ed2a92548913bbb010bf807d, type: 2}
+  rightWeapon: {fileID: 11400000, guid: d9a57a01ed2a92548913bbb010bf807d, type: 2}
+  leftWeapon: {fileID: 11400000, guid: d9a57a01ed2a92548913bbb010bf807d, type: 2}
+  unarmedWeapon: {fileID: 11400000, guid: e3186cd13b7e9fa4d9939f66f7115613, type: 2}
+  weaponsInRightHandSlots:
+  - {fileID: 11400000, guid: d9a57a01ed2a92548913bbb010bf807d, type: 2}
+  - {fileID: 11400000, guid: a7bd5db3753077a429005b243c6bab5d, type: 2}
+  weaponsInLeftHandSlots:
+  - {fileID: 11400000, guid: d9a57a01ed2a92548913bbb010bf807d, type: 2}
+  - {fileID: 11400000, guid: a7bd5db3753077a429005b243c6bab5d, type: 2}
+  currentRightWeaponIndex: 0
+  currentLeftWeaponIndex: 0
+  weaponsInventory: []
 --- !u!114 &8956344760267524485
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -191,6 +302,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47e976fe3c7c0da4b87bcdb93ea30a0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lastAttack: 
 --- !u!114 &8956344760267524484
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -206,8 +318,12 @@ MonoBehaviour:
   healthLevel: 10
   maxHealth: 0
   currentHealth: 0
+  staminaLevel: 10
+  maxStamina: 0
+  currentStamina: 0
   healthBar: {fileID: 0}
-  animatorHandler: {fileID: 0}
+  staminaBar: {fileID: 0}
+  animatorHandler: {fileID: 8956344759247246766}
 --- !u!1001 &8956344759397558701
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -382,21 +498,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 100326, guid: 8f0565f23a2b58541a475bd3c1393052, type: 3}
   m_PrefabInstance: {fileID: 8956344759397558701}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &8956344759247246766
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8956344759397592651}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f293a6cf57bd8a458e244da209943ac, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerManager: {fileID: 0}
-  animator: {fileID: 0}
-  canRotate: 1
 --- !u!114 &8956344759247246761
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -409,6 +510,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0582b81e2a74e134a9287448da590b2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attackingWeapon: {fileID: 0}
+--- !u!114 &8956344759247246766
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8956344759397592651}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f293a6cf57bd8a458e244da209943ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 0}
+  playerManager: {fileID: 0}
+  canRotate: 1
 --- !u!1 &8956344759397592835 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100014, guid: 8f0565f23a2b58541a475bd3c1393052, type: 3}
@@ -427,8 +544,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parentOverride: {fileID: 8956344759543425828}
+  currentWeapon: {fileID: 0}
   isLeftHandSlot: 1
   isRightHandSlot: 0
+  isBackSlot: 0
   currentWeaponModel: {fileID: 0}
 --- !u!1 &8956344759397592903 stripped
 GameObject:
@@ -448,12 +567,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parentOverride: {fileID: 8956344759397692263}
+  currentWeapon: {fileID: 0}
   isLeftHandSlot: 0
   isRightHandSlot: 1
+  isBackSlot: 0
   currentWeaponModel: {fileID: 0}
 --- !u!4 &8956344759397692011 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400326, guid: 8f0565f23a2b58541a475bd3c1393052, type: 3}
+  m_PrefabInstance: {fileID: 8956344759397558701}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &8956344759397692077 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400128, guid: 8f0565f23a2b58541a475bd3c1393052, type: 3}
   m_PrefabInstance: {fileID: 8956344759397558701}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &8956344759397692195 stripped

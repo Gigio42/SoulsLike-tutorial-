@@ -4,10 +4,9 @@ using UnityEngine;
 
 namespace Dark
 {
-    public class AnimatorHandler : MonoBehaviour
+    public class AnimatorHandler : AnimatorManager
     {
         public PlayerManager playerManager;
-        public Animator animator;
         InputHandler inputHandler;
         PlayerLocomotion playerLocomotion;
         int vertical;
@@ -86,12 +85,7 @@ namespace Dark
             animator.SetFloat(horizontal, h, 0.1f, Time.deltaTime);
         }
 
-        public void PlayTargetAnimation(string targetAnimation, bool isInteracting)
-        {
-            animator.applyRootMotion = isInteracting;
-            animator.SetBool("isInteracting", isInteracting);
-            animator.CrossFade(targetAnimation, 0.2f);
-        }
+        
 
         public void CanRotate()
         {
