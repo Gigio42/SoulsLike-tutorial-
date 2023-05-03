@@ -166,7 +166,7 @@ namespace Dark
 
                             if (hit.transform.gameObject.layer == environmentLayer)
                             {
-                                //cannot lock on
+                                //cannot lockon
                             }
                             else
                             {
@@ -231,7 +231,7 @@ namespace Dark
 
             if (currentLockOnTarget != null)
             {
-                cameraPivotTransform.transform.localPosition = Vector3.SmoothDamp(cameraPivotTransform.localPosition, newLockedPosition, ref velocity, Time.deltaTime);
+                cameraPivotTransform.transform.localPosition = Vector3.SmoothDamp(cameraPivotTransform.transform.localPosition, newLockedPosition, ref velocity, Time.deltaTime);
             }
             else
             {
