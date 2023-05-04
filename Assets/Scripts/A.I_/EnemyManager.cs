@@ -8,10 +8,12 @@ namespace Dark
     {   
         EnemyLocomotionManager enemyLocomotionManager;
         EnemyAnimatorManager enemyAnimatorManager;
-        public bool isPerformingAction;
+        EnemyStats enemyStats;
 
-        public EnemyAttackAction[] enemyAttacks;
-        public EnemyAttackAction currentAttack;
+        public State currentState;
+        public CharacterStats currentTarget;
+        
+        public bool isPerformingAction;
 
         [Header("A.I. Settings")]
         public float detectionRadius = 20f;
@@ -24,6 +26,7 @@ namespace Dark
         {
             enemyLocomotionManager = GetComponent<EnemyLocomotionManager>();
             enemyAnimatorManager = GetComponentInChildren<EnemyAnimatorManager>();
+            enemyStats = GetComponent<EnemyStats>();
         }
 
         private void Update() 
@@ -33,28 +36,24 @@ namespace Dark
 
         private void FixedUpdate() 
         {
-            HandleCurrentAction();
+            HandleStateMachine();
         }
 
-        private void HandleCurrentAction()
+        private void HandleStateMachine()
         {
-            if (enemyLocomotionManager.currentTarget != null)
+            if (currentState != null)
             {
-                enemyLocomotionManager.distanceFromTarget = Vector3.Distance(enemyLocomotionManager.currentTarget.transform.position,transform.position);
+                State nextState = currentState.Tick(this, enemyStats, enemyAnimatorManager);
+
+                if (nextState != null)
+                {
+                    SwitchToNextState(nextState);
+                }
             }
-           
-            if (enemyLocomotionManager.currentTarget == null)
-            {
-                enemyLocomotionManager.HandleDetection();
-            }
-            else if (enemyLocomotionManager.distanceFromTarget > enemyLocomotionManager.stoppingDistance)
-            {
-                enemyLocomotionManager.HandleMoveToTarget();
-            }
-            else if (enemyLocomotionManager.distanceFromTarget <= enemyLocomotionManager.stoppingDistance)
-            {
-                AttackTarget();
-            }
+        }
+        private void SwitchToNextState(State state)
+        {
+            currentState = state;
         }
 
         private void HandleRecoveryTime()
@@ -74,9 +73,26 @@ namespace Dark
         }
 
         #region Attacks
+
+        private void AttackTarget()
+        {
+            /* if (isPerformingAction) return;
+            if (currentAttack == null)
+            {
+                GetNewAttack();
+            }
+            else
+            {
+                isPerformingAction = true;
+                currentRecoveyTime = currentAttack.recoveryTime;
+                enemyAnimatorManager.PlayTargetAnimation(currentAttack.actionAnimation, true);
+                currentAttack = null;
+            } */
+        }
+
         private void GetNewAttack()
         {
-            Vector3 targetDirection = enemyLocomotionManager.currentTarget.transform.position - transform.position;
+            /* Vector3 targetDirection = enemyLocomotionManager.currentTarget.transform.position - transform.position;
             float viewableAngle = Vector3.Angle(targetDirection, transform.forward);
             enemyLocomotionManager.distanceFromTarget = Vector3.Distance(enemyLocomotionManager.currentTarget.transform.position, transform.position);
 
@@ -122,25 +138,9 @@ namespace Dark
                     }
 
                 }
-            }
+            } */
         }
         #endregion
-
-        private void AttackTarget()
-        {
-            if (isPerformingAction) return;
-            if (currentAttack == null)
-            {
-                GetNewAttack();
-            }
-            else
-            {
-                isPerformingAction = true;
-                currentRecoveyTime = currentAttack.recoveryTime;
-                enemyAnimatorManager.PlayTargetAnimation(currentAttack.actionAnimation, true);
-                currentAttack = null;
-            }
-        }
 
         private void OnDrawGizmosSelected()
         {
