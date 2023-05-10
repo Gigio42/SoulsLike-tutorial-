@@ -56,6 +56,7 @@
      <Compile Include="Assets\Asset Packs\Post-Processing-main\Assets\Vignette\Vignette.cs" />
      <Compile Include="Assets\Asset Packs\Post-Processing-main\Assets\Color Correction\ColorCorrection.cs" />
      <Compile Include="Assets\Asset Packs\Post-Processing-main\Assets\Sharpness\SharpnessDispatcher.cs" />
+     <Compile Include="Assets\Scripts\CombatStanceState.cs" />
      <Compile Include="Assets\Scripts\A.I_\EnemyAnimatorManager.cs" />
      <Compile Include="Assets\Scripts\DamagePlayer.cs" />
      <Compile Include="Assets\Asset Packs\Post-Processing-main\Assets\Zoom\Zoom.cs" />
@@ -75,6 +76,7 @@
      <Compile Include="Assets\Scripts\Player\CameraHandler.cs" />
      <Compile Include="Assets\Asset Packs\Post-Processing-main\Assets\Kuwahara Filter\AnisotropicKuwahara.cs" />
      <Compile Include="Assets\Scripts\PlayerControls.cs" />
+     <Compile Include="Assets\Scripts\PursueTargetState.cs" />
      <Compile Include="Assets\Scripts\StaminaBar.cs" />
      <Compile Include="Assets\Asset Packs\Post-Processing-main\Assets\Pixel Art\Ditherer.cs" />
      <Compile Include="Assets\Scripts\UI\InteractableUI.cs" />
@@ -82,6 +84,8 @@
      <Compile Include="Assets\Scripts\WeaponSlotManager.cs" />
      <Compile Include="Assets\Asset Packs\Post-Processing-main\Assets\ImageBlitter\ImageBlitter.cs" />
      <Compile Include="Assets\Asset Packs\Post-Processing-main\Assets\Edge Detection\DifferenceOfGaussians.cs" />
+     <Compile Include="Assets\Scripts\AttackState.cs" />
+     <Compile Include="Assets\Scripts\IdleState.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerAttacker.cs" />
      <Compile Include="Assets\Data\Shaders\ResetAnimatorBool.cs" />
      <Compile Include="Assets\Asset Packs\Post-Processing-main\Assets\Pixel Art\PaletteSwapper.cs" />
@@ -89,16 +93,13 @@
      <Compile Include="Assets\Scripts\CharacterManager.cs" />
      <Compile Include="Assets\Scripts\Interactable.cs" />
      <Compile Include="Assets\Scripts\UI\HandEquipmentSlotUI.cs" />
+     <Compile Include="Assets\Scripts\State.cs" />
      <Compile Include="Assets\Asset Packs\Post-Processing-main\Assets\Kuwahara Filter\GeneralizedKuwahara.cs" />
      <Compile Include="Assets\Asset Packs\Post-Processing-main\Assets\Chromatic Aberration\ChromaticAberration.cs" />
      <Compile Include="Assets\Asset Packs\Post-Processing-main\Assets\Bloom\Bloom.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerInventory.cs" />
      <Compile Include="Assets\Asset Packs\Post-Processing-main\Assets\Edge Detection\ExtendedDoG.cs" />
-     <Compile Include="Assets\Scripts\State.cs" />
-     <Compile Include="Assets\Scripts\IdleState.cs" />
-     <Compile Include="Assets\Scripts\PursueTargetState.cs" />
-     <Compile Include="Assets\Scripts\AttackState.cs" />
-     <Compile Include="Assets\Scripts\CombatStanceState.cs" />
+     <Compile Include="Assets\Scripts\AmbushState.cs" />
      <None Include="Assets\Asset Packs\unity-chan!\Unity-chan! Model\Art\UnityChanShader\Shader\Unitychan_chara_fuku.shader" />
      <None Include="Assets\Asset Packs\SD Unity-Chan Haon Custom\Shader\Unity-chan Toon Shader Ver 2.0.6\Toon_DoubleShadeWithFeather_Mobile_TransClipping_StencilMask.shader" />
      <None Include="Assets\Asset Packs\Synty - Polygon Student Sample - Copia\README - Usage Rights for these assets.txt" />
